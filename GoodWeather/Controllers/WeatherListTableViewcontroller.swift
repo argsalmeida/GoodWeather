@@ -46,8 +46,8 @@ class WeatherListTableViewcontroller: UITableViewController, AddWeatherDelegate 
         //cell.temperatureLabel.text = "70º"
         
         let weatherVM = self.weatherListViewModel.modelAt(indexPath.row)
-//        cell.cityNameLabel.text = weatherVM.name
-//        cell.temperatureLabel.text = "\(weatherVM.currentTemperature.temperature)"
+        //        cell.cityNameLabel.text = weatherVM.name
+        //        cell.temperatureLabel.text = "\(weatherVM.currentTemperature.temperature)"
         cell.configure(weatherVM)
         
         return cell
@@ -56,7 +56,7 @@ class WeatherListTableViewcontroller: UITableViewController, AddWeatherDelegate 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddWeatherCityViewController" {
             prepareSegueForAddWeatherCityViewController(segue: segue)
-        } else if segue.identifier == "SettingsTableViewConteoller" {
+        } else if segue.identifier == "SettingsTableViewController" {
             prepareSegueForSettingsTableViewController(segue: segue)
         }
     }
@@ -74,8 +74,22 @@ class WeatherListTableViewcontroller: UITableViewController, AddWeatherDelegate 
     }
     
     private func prepareSegueForSettingsTableViewController(segue: UIStoryboardSegue) {
-//        guard let nav = segue.destination as? UINavigationController else {
-//            fatalError("NavigationController not found")
-//        }
+        guard let nav = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found")
+        }
+        
+        guard let settingsTVC = nav.viewControllers.first as? SettingsTableViewController else {
+            fatalError("SettingsTableViewController not found")
+        }
+        
+        settingsTVC.delegate = self
+    }
+}
+
+extension WeatherListTableViewcontroller: SettingsDelegate {
+    func settingsDone(vm: SettingsViewModel) {
+        print("Settings Done")
+        self.weatherListViewModel.updateUnit(to: vm.selectedUnit)
+        self.tableView.reloadData()
     }
 }

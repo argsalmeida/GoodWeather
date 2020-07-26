@@ -30,5 +30,20 @@ struct SettingsViewModel {
     
     //let units = [Unit.celsius, Unit.fahrenheit]
     let units = Unit.allCases //every case on the enum Unit
+    private var _selectedUnit: Unit = Unit.fahrenheit
+    
+    var selectedUnit: Unit {
+        get {
+            let userDefaults = UserDefaults.standard
+            if let value = userDefaults.value(forKey: "unit") as? String {
+                return Unit(rawValue: value)!
+            }
+            
+            return self._selectedUnit
+        } set {
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(newValue.rawValue, forKey: "unit")
+        }
+    }
     
 }
