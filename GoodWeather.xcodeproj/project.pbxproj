@@ -20,6 +20,11 @@
 		4B122F9624CCEFC300981832 /* GoodWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B122F9524CCEFC300981832 /* GoodWeatherUITests.swift */; };
 		4B122FA524CCEFE800981832 /* WeatherListTableViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B122FA424CCEFE800981832 /* WeatherListTableViewcontroller.swift */; };
 		4B122FA724CCF01100981832 /* AddWeatherCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B122FA624CCF01100981832 /* AddWeatherCityViewController.swift */; };
+		4BC5937724CDF87F006C8B3F /* 740-gear-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC5937424CDF87E006C8B3F /* 740-gear-toolbar@2x.png */; };
+		4BC5937824CDF87F006C8B3F /* 740-gear-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC5937524CDF87F006C8B3F /* 740-gear-toolbar@3x.png */; };
+		4BC5937924CDF87F006C8B3F /* 740-gear-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC5937624CDF87F006C8B3F /* 740-gear-toolbar.png */; };
+		4BC5937B24CDF9A5006C8B3F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5937A24CDF9A5006C8B3F /* SettingsTableViewController.swift */; };
+		4BC5937D24CDFB2B006C8B3F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5937C24CDFB2B006C8B3F /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		4B122F9724CCEFC300981832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B122FA424CCEFE800981832 /* WeatherListTableViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewcontroller.swift; sourceTree = "<group>"; };
 		4B122FA624CCF01100981832 /* AddWeatherCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherCityViewController.swift; sourceTree = "<group>"; };
+		4BC5937424CDF87E006C8B3F /* 740-gear-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@2x.png"; sourceTree = "<group>"; };
+		4BC5937524CDF87F006C8B3F /* 740-gear-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@3x.png"; sourceTree = "<group>"; };
+		4BC5937624CDF87F006C8B3F /* 740-gear-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar.png"; sourceTree = "<group>"; };
+		4BC5937A24CDF9A5006C8B3F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4BC5937C24CDFB2B006C8B3F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4B102B9324CDA414002EDF33 /* WeatherListViewModel.swift */,
+				4BC5937C24CDFB2B006C8B3F /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -141,6 +152,7 @@
 		4B122F7224CCEFC200981832 /* GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
+				4BC5937324CDF85B006C8B3F /* Images */,
 				4B102B9524CDEFD1002EDF33 /* Extensions */,
 				4B102B9224CDA3FB002EDF33 /* ViewModels */,
 				4B102B8F24CD9535002EDF33 /* Services */,
@@ -179,8 +191,19 @@
 			children = (
 				4B122FA424CCEFE800981832 /* WeatherListTableViewcontroller.swift */,
 				4B122FA624CCF01100981832 /* AddWeatherCityViewController.swift */,
+				4BC5937A24CDF9A5006C8B3F /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4BC5937324CDF85B006C8B3F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4BC5937624CDF87F006C8B3F /* 740-gear-toolbar.png */,
+				4BC5937424CDF87E006C8B3F /* 740-gear-toolbar@2x.png */,
+				4BC5937524CDF87F006C8B3F /* 740-gear-toolbar@3x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +312,10 @@
 			files = (
 				4B122F8024CCEFC300981832 /* LaunchScreen.storyboard in Resources */,
 				4B122F7D24CCEFC300981832 /* Assets.xcassets in Resources */,
+				4BC5937924CDF87F006C8B3F /* 740-gear-toolbar.png in Resources */,
 				4B122F7B24CCEFC200981832 /* Main.storyboard in Resources */,
+				4BC5937724CDF87F006C8B3F /* 740-gear-toolbar@2x.png in Resources */,
+				4BC5937824CDF87F006C8B3F /* 740-gear-toolbar@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,9 +345,11 @@
 				4B122FA524CCEFE800981832 /* WeatherListTableViewcontroller.swift in Sources */,
 				4B102B9124CD9540002EDF33 /* Webservice.swift in Sources */,
 				4B102B9424CDA414002EDF33 /* WeatherListViewModel.swift in Sources */,
+				4BC5937D24CDFB2B006C8B3F /* SettingsViewModel.swift in Sources */,
 				4B102B8E24CD7BA7002EDF33 /* WeatherCell.swift in Sources */,
 				4B122FA724CCF01100981832 /* AddWeatherCityViewController.swift in Sources */,
 				4B122F7624CCEFC200981832 /* SceneDelegate.swift in Sources */,
+				4BC5937B24CDF9A5006C8B3F /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
